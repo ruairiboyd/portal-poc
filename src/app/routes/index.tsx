@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import ErrorPage from './errorPage';
 import Root from './root';
 import AppLayout from './AppLayout';

@@ -1,4 +1,6 @@
-export default function Releases() {
+import React from 'react';
+
+export default function Releases(): React.ReactElement {
   return (
     <div>
       <h1>Releases</h1>
