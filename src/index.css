@@ -1,8 +1,52 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #343a40;
+  color: #fff;
+  padding: 1rem;
+}
+
+.navbar.primary {
+  background-color: #007bff;
+}
+
+.navbar.light {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.navbar .navbar-brand h2 {
   margin: 0;
-  padding: 0;
+}
+
+.container-fluid .row .col {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: #007bff;
+}
+
+.content-container {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin: 1rem;
 }
