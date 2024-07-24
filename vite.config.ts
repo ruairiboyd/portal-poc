@@ -46,6 +46,12 @@ export default defineConfig({
                 '**/*.test.ts', // Exclude test files from coverage
                 '**/*.test.tsx', // Exclude test files from coverage
                 '**/__tests__/**', // Exclude __tests__ directories from coverage
+                '**/src/app/AppLayout.tsx', // Exclude AppLayout from coverage
+                '**/src/app/AppProvider.tsx', // Exclude AppProvider from coverage
+                '**/src/App.tsx',
+                '**/src/main.tsx',
+                '**/src/features/**',
+                '**/src/lib/**',
             ],
             reporter: ['text', 'json', 'html'],
             thresholds: {

@@ -17,4 +17,11 @@ describe('Count', () => {
         fireEvent.click(getByText('Increment'))
         expect(getByText('Count: 2')).toBeInTheDocument()
     })
+    test('clicking increment button 3* increases count by 3', () => {
+        const { getByText } = render(<Count />)
+        fireEvent.click(getByText('Increment'))
+        fireEvent.click(getByText('Increment'))
+        fireEvent.click(getByText('Increment'))
+        expect(getByText('Count: 3')).toBeInTheDocument()
+    })
 })
