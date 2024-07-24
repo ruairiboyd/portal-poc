@@ -36,11 +36,24 @@ export default defineConfig({
         globals: true,
         environment: 'jsdom',
         setupFiles: ['./src/setupTests.ts'],
+        exclude: ['**/node_modules/**', '**/dist/**', '**/src/app/routes/**'],
         coverage: {
+            include: ['**/src/**'],
+            exclude: [
+                '**/node_modules/**',
+                '**/dist/**',
+                '**/src/app/routes/**',
+                '**/*.test.ts', // Exclude test files from coverage
+                '**/*.test.tsx', // Exclude test files from coverage
+                '**/__tests__/**', // Exclude __tests__ directories from coverage
+            ],
             reporter: ['text', 'json', 'html'],
+            thresholds: {
+                lines: 100,
+                statements: 100,
+                branches: 100,
+                functions: 100,
+            },
         },
     },
-    // server: {
-    // 	open: true,
-    // },
 })

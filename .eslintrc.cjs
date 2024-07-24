@@ -9,6 +9,10 @@ module.exports = {
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts'],
     parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: ['./tsconfig.app.json', './tsconfig.node.json'],
+        tsconfigRootDir: __dirname,
+    },
     plugins: ['react-refresh', 'prettier', 'import', 'check-file'],
     rules: {
         'react-refresh/only-export-components': [
@@ -56,6 +60,11 @@ module.exports = {
             {
                 selector: 'function',
                 format: ['camelCase', 'PascalCase'],
+            },
+            {
+                selector: 'variable',
+                types: ['boolean', 'string', 'number', 'array'],
+                format: ['strictCamelCase', 'UPPER_CASE'],
             },
         ],
     },

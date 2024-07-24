@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './ErrorPage'
-import { AppLayout } from './AppLayout'
+import { AppLayout } from '../AppLayout'
 import { HomeRoute } from './HomeRoute'
 import { UserRoute } from './UserRoute'
 import { QueryClient } from '@tanstack/react-query'

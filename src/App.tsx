@@ -1,6 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query'
 import { createRouter } from './app/routes'
-import { AppProvider } from './app/routes/AppProvider'
+import { AppProvider } from './app/AppProvider'
 import { RouterProvider } from 'react-router-dom'
 import { useMemo } from 'react'
 
